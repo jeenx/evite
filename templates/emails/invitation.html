@@ -1,0 +1,11 @@
+{% autoescape off %}
+Hi, {{ confirmation.user_email }},
+
+Thank you for signing up for {{ confirmation.event.name }}.
+
+Here is your invitation link to the event:
+http://{{ domain }}{% url 'events:event-retrieve-update-destroy' pk=confirmation.event.id %}
+
+Here is your confirmation ID: {{ confirmation.confirmation_id }}
+Confirmation ID can be used to cancel your registration.
+{% endautoescape %}

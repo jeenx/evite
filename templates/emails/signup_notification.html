@@ -1,0 +1,8 @@
+{% autoescape off %}
+Hi, {{ admin_email }},
+
+{{ confirmation.user_email}} has signed up for {{ confirmation.event.name }}.
+
+Here is the confirmation ID: {{ confirmation.confirmation_id }}
+Confirmation ID can be used to cancel the registration.
+{% endautoescape %}
